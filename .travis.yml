@@ -1,11 +1,14 @@
 language: ruby
 
+# Enable Travis CI to use Docker during build process
 services:
   - docker
 
+# Initialize Image build. DockerHub creds are encrypted via Travis CI Environment Variables.
 script:
   - docker build -t "$DOCKER_USERNAME"/zabbix-lamp:1.0 .
 
+# Push image to the Docker Hub repo.
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push "$DOCKER_USERNAME"/zabbix-lamp:1.0

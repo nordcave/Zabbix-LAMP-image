@@ -9,7 +9,7 @@ exit
 " | mysql
 )
 
-# Load the Zabbix database schema to the MySQL database
+# Load Zabbix database schema to the MySQL database
 cd /usr/share/zabbix-server-mysql
 # connecting to MySQL with socket
 zcat schema.sql.gz | mysql zabbixdb
