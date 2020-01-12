@@ -22,6 +22,4 @@ sed -i 's#/var/www/html#/usr/share/zabbix#' /etc/apache2/sites-available/default
 # Finally, lauch services
 service apache2 restart
 service zabbix-server restart
-
-# To terminal remain active after 'docker run'.
 /bin/bash
