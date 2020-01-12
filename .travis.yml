@@ -4,4 +4,8 @@ services:
   - docker
 
 script:
-  - docker build -t nordcave/zabbix-lamp .
+  - docker build -t "$DOCKER_USERNAME"/zabbix-lamp .
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push zabbix-lamp:1.0
