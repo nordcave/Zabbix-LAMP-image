@@ -8,4 +8,4 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push zabbix-lamp:1.0
+  - docker push "$DOCKER_USERNAME"/zabbix-lamp:1.0
