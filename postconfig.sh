@@ -19,7 +19,6 @@ sed -i 's#/var/www/html#/usr/share/zabbix#' /etc/apache2/sites-available/default
 # Configure MySQL DB for Zabbix.
 /bin/sh -c /server_build/zabbix-db-init.sh
 
-# Finally, lauch services
 service apache2 restart
 service zabbix-server restart
 /bin/bash
