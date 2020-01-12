@@ -1,7 +1,7 @@
 #!/bin/bash
 # Configure terminal output + set the apt-get command as variable.
 set -e
-source /server_build/prebuildconfig
+source /server_build/prepare
 set -x
 
 # Fix "..policy-rc.d denied execution of start." issue. See https://bit.ly/36SG4Xj

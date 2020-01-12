@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-source /server_build/prebuildconfig
+source /server_build/prepare
 set -x
 
 # Configure Zabbix package repository for Ubuntu 18.04.
